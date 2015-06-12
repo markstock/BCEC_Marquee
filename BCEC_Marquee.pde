@@ -28,7 +28,6 @@ void setup() {
   size(width, height);
   frameRate(30);
   
-  //noFill();
   noStroke();
   smooth();
   strokeWeight(2.0);
@@ -51,22 +50,25 @@ void draw() {
   
   if (useScreen == 0) {
     // high-res left screen
-    stroke(127,0,0,255);
-    fill(127,0,0,63);
+    int val = int(random(63,255));
+    stroke(val,0,0,255);
+    fill(val,0,0,63);
     float rad = random(10,30);
     ellipse(random(10, width-10), random(10, height-10), rad, rad);
     
   } else if (useScreen == 1) {
     // high-res right screen
-    stroke(0,127,0,255);
-    fill(0,127,0,63);
+    int val = int(random(63,255));
+    stroke(0,val,0,255);
+    fill(0,val,0,63);
     float rad = random(10,30);
     ellipse(random(10, width-10), random(10, height-10), rad, rad);
     
   } else {
     // low-res top screen
-    stroke(0,0,127,255);
-    fill(0,0,127,63);
+    int val = int(random(63,255));
+    stroke(0,0,val,255);
+    fill(0,0,val,63);
     float rad = random(10,30);
     ellipse(random(10, width-10), random(10, height-10), rad, rad);
   }
