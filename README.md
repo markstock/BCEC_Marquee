@@ -28,7 +28,7 @@ This system was designed to work on Linux, where there are plenty of useful comm
         ./fadefromblack.pl 1 30
         ./fadetoblack.pl 849 899
 
-8. Encode the movie. You'll need the `mencoder` and 
+8. Encode the movie. You'll need the `mencoder` package.
 
         mencoder "mf://frame_????.png" -mf w=1920:h=1080:type=png:fps=30 -o video_1080p30.mov -sws 9 -of lavf -lavfopts format=mov -nosub -vf softskip,harddup -nosound -ovc x264 -x264encopts bitrate=15000:vbv_maxrate=20000:vbv_bufsize=2000:nointerlaced:force_cfr:frameref=3:mixed_refs:bframes=1:b_adapt=2:weightp=1:direct_pred=auto:aq_mode=1:me=umh:me_range=16:subq=6:mbtree:psy_rd=0.8,0.2:chroma_me:trellis=1:nocabac:deblock:partitions=p8x8,b8x8,i8x8,i4x4:nofast_pskip:nodct_decimate:threads=auto:ssim:psnr:keyint=300:keyint_min=30:level_idc=30:global_header
 
